@@ -1,0 +1,67 @@
+#nav-bottom
+  .menu
+    .menu-block.col-xs-4
+      span.explore
+        a(ng-href='/explore') Explore
+      span.search
+        a(ng-href='/search') Search
+      span.showroom
+        a(ng-href='/showroom') Showroom
+    .menu-block.col-xs-4.text-center(ng-controller='authCtrl')
+      span.login(ng-hide='currentUser')
+        a(ng-href="/signup") Log in
+      span.user(ng-show='currentUser') 
+        a(href='/user/{{currentUser.$id}}/love/loves') {{currentUser.firstname}} {{currentUser.lastname}}
+      span.logout(ng-show='currentUser')
+        a(ng-href="/logout" ng-click="logout()") Log out
+    .menu-block.col-xs-4.text-right
+      span.follow(follow)
+        a(ng-href='#' target="_self" follow) Follow
+      span.info
+        a(ng-href='/info') Info
+      span.language
+        a.chinese(ng-href='#') 中文
+#follow
+  img.close.img-responsive(src='/assets/img/ui/follow_cross.png')
+  .wrapper
+    .subscribe-wrapper
+      input.input(name='email', type='email', placeholder='EMAIL', required='required', aria-required='true')
+      button.subscribe SUBSCRIBE
+    .row
+      .col-xs-4
+        img#twitter.social_icon.text-center.img-responsive(src='/assets/img/ui/twitter.png')
+      .col-xs-4
+        img#facebook.social_icon.text-center.img-responsive(src='/assets/img/ui/facebook.png')
+      .col-xs-4
+        img#pinterest.social_icon.text-center.img-responsive(src='/assets/img/ui/pinterest.png')
+    .row
+      .col-xs-4
+        img#weibo.social_icon.text-center.img-responsive(src='/assets/img/ui/sina-weibo.png')
+      .col-xs-4
+        img#googleplus.social_icon.text-center.img-responsive(src='/assets/img/ui/googleplus.png')
+      .col-xs-4
+        img#instagram.social_icon.text-center.img-responsive(src='/assets/img/ui/instagram.png')
+    .row
+      .col-xs-4
+        img#youku.social_icon.text-center.img-responsive(src='/assets/img/ui/nice.png')
+      .col-xs-4
+        img#qzone.social_icon.text-center.img-responsive(src='/assets/img/ui/qzone.png')
+      .col-xs-4
+        img#wechat.social_icon.text-center.img-responsive(src='/assets/img/ui/wechat.png')
+    p.title.text-center
+      a(href="") More
+script.
+  $(".follow").click( function(event){
+    event.preventDefault();
+    if ($('#follow').hasClass('popup')) {
+    $('#follow').stop().fadeOut(200);
+    $('#follow').removeClass("popup");}
+    else {
+    $('#follow').stop().fadeIn(200);
+    $('#follow').addClass("popup");
+    return false;}
+  });
+  $(".close").click(function(){
+    $('#follow').stop().fadeOut(200);
+    $('#follow').removeClass("popup");
+  })

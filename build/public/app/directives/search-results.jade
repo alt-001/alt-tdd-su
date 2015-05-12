@@ -1,0 +1,7 @@
+img.cover.img-responsive(ng-src='/assets/img/featured/thumb/{{product.image}}')
+.product
+	| {{product.name | wordsTrunc: 10}}
+.brand
+	| by 
+	a(href='/brand/{{product.brand}}/products') {{product.brand}}
+.price {{product.price | currency: '£'}}

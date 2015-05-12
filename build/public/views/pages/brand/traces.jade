@@ -1,0 +1,6 @@
+#brandTraces(ng-controller='brandCtrl')
+  .col-xs-3
+    include brand-sidebar
+  .col-xs-9
+    ul#traces(masonry ng-controller='productsCtrl')
+      li.masonry-brick.col-xs-4.inspiration(list-traces ng-repeat='trace in brandTraces')

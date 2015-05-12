@@ -1,0 +1,11 @@
+
+<div id="login" ng-controller="authCtrl">
+  <form name="userLogin" ng-submit="login()" novalidate="" ng-hide="currentUser">   
+    <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true"/>
+    <p ng-show="userLogin.email.$invalid &amp;&amp; userLogin.email.$touched" class="error validation">Must be a valid email</p>
+    <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true"/>
+    <p ng-show="userLogin.password.$invalid &amp;&amp; userLogin.password.$touched" class="error validation">password is required </p>
+    <button type="submit" ng-disabled="userLogin.$invalid" class="btn">Login</button>
+    <p>or <a href="/register">Register</a></p>
+  </form>
+</div>

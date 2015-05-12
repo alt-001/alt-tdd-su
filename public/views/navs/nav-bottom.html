@@ -1,0 +1,48 @@
+
+<div id="nav-bottom">
+  <div class="menu">
+    <div class="menu-block col-xs-4"><span class="explore"><a ng-href="/explore">Explore</a></span><span class="search"><a ng-href="/search">Search</a></span><span class="showroom"><a ng-href="/showroom">Showroom</a></span></div>
+    <div ng-controller="authCtrl" class="menu-block col-xs-4 text-center"><span ng-hide="currentUser" class="login"><a ng-href="/signup">Log in</a></span><span ng-show="currentUser" class="user"><a href="/user/{{currentUser.$id}}/love/loves">{{currentUser.firstname}} {{currentUser.lastname}}</a></span><span ng-show="currentUser" class="logout"><a ng-href="/logout" ng-click="logout()">Log out</a></span></div>
+    <div class="menu-block col-xs-4 text-right"><span follow="follow" class="follow"><a ng-href="#" target="_self" follow="follow">Follow</a></span><span class="info"><a ng-href="/info">Info</a></span><span class="language"><a ng-href="#" class="chinese">中文</a></span></div>
+  </div>
+</div>
+<div id="follow"><img src="/assets/img/ui/follow_cross.png" class="close img-responsive"/>
+  <div class="wrapper">
+    <div class="subscribe-wrapper">
+      <input name="email" type="email" placeholder="EMAIL" required="required" aria-required="true" class="input"/>
+      <button class="subscribe">SUBSCRIBE</button>
+    </div>
+    <div class="row">
+      <div class="col-xs-4"><img id="twitter" src="/assets/img/ui/twitter.png" class="social_icon text-center img-responsive"/></div>
+      <div class="col-xs-4"><img id="facebook" src="/assets/img/ui/facebook.png" class="social_icon text-center img-responsive"/></div>
+      <div class="col-xs-4"><img id="pinterest" src="/assets/img/ui/pinterest.png" class="social_icon text-center img-responsive"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4"><img id="weibo" src="/assets/img/ui/sina-weibo.png" class="social_icon text-center img-responsive"/></div>
+      <div class="col-xs-4"><img id="googleplus" src="/assets/img/ui/googleplus.png" class="social_icon text-center img-responsive"/></div>
+      <div class="col-xs-4"><img id="instagram" src="/assets/img/ui/instagram.png" class="social_icon text-center img-responsive"/></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4"><img id="youku" src="/assets/img/ui/nice.png" class="social_icon text-center img-responsive"/></div>
+      <div class="col-xs-4"><img id="qzone" src="/assets/img/ui/qzone.png" class="social_icon text-center img-responsive"/></div>
+      <div class="col-xs-4"><img id="wechat" src="/assets/img/ui/wechat.png" class="social_icon text-center img-responsive"/></div>
+    </div>
+    <p class="title text-center"><a href="">More</a></p>
+  </div>
+</div>
+<script>
+  $(".follow").click( function(event){
+    event.preventDefault();
+    if ($('#follow').hasClass('popup')) {
+    $('#follow').stop().fadeOut(200);
+    $('#follow').removeClass("popup");}
+    else {
+    $('#follow').stop().fadeIn(200);
+    $('#follow').addClass("popup");
+    return false;}
+  });
+  $(".close").click(function(){
+    $('#follow').stop().fadeOut(200);
+    $('#follow').removeClass("popup");
+  })
+</script>

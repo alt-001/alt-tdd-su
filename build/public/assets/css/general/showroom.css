@@ -1,0 +1,11 @@
+#showroom {
+  font-family: 'PT Sans' 'Source Sans Pro';
+}
+#showroom h2 {
+  display: block;
+  margin-top: 20%;
+  font-weight: 700;
+  color: #b8b8b8;
+  text-transform: uppercase;
+  text-align: center;
+}

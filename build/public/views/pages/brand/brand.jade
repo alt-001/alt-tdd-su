@@ -1,0 +1,9 @@
+#brandStory(ng-controller='brandCtrl')
+  .col-xs-3
+    include brand-sidebar
+  .col-xs-9
+    .videogular-container
+      .video(video-player)
+    .article-container
+      h4 {{brandTitle}}
+      #story(ng-include='brandStory')

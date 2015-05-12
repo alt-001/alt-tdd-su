@@ -1,0 +1,10 @@
+#brandSidebar(ng-controller="brandCtrl")
+  h1.brand-title {{brand}}
+  #brandFollow
+    button.follow.btn(ng-click='followBrand(brand)' ng-hide='ifFollowed(brand)') Follow
+    button.unfollow.btn(ng-click='unfollowBrand(brand)' ng-show='ifFollowed(brand)') Unfollow
+  #intro {{brandIntro}}
+  #chapters
+    ul.text-right
+      li(ng-repeat="chapter in brandChapters" )
+        a(href='/brand/{{brand}}/{{chapter}}' style="text-transform: capitalize" ng-class='{active: chapterActive(chapter)}') {{chapter}}

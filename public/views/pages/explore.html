@@ -1,0 +1,227 @@
+
+<div id="explore" ng-controller="productsCtrl">
+  <div id="filters" class="col-xs-3">
+    <div id="handle" class="col-xs-12">
+      <h4>feel lovely?</h4>
+      <h1>pull</h1>
+      <div class="jump"><a href="#luckyProducts">
+          <div class="pull-tab"></div></a></div>
+    </div>
+    <div class="col-xs-12">
+      <form>
+        <div class="col-xs-6">
+          <label class="filter-button gender">
+            <div class="child">
+              <input ng-model="gender" type="radio" name="filter" value="x"/>Man
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button gender">
+            <div class="child">
+              <input ng-model="gender" type="radio" name="filter" value="y"/>Woman
+            </div>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-12">
+      <form>
+        <div class="col-xs-6">
+          <label class="filter-button type">
+            <div class="child">
+              <input ng-model="productsFilterService.activeFilters.maincat" type="radio" name="filter" value="footwear"/>Shoes
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button type">
+            <div class="child">
+              <input ng-model="productsFilterService.activeFilters.maincat" type="radio" name="filter" value="accessories"/>Accessories
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button type">
+            <div class="child">
+              <input ng-model="productsFilterService.activeFilters.maincat" type="radio" name="filter" value="bag"/>Bags
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button type">
+            <div class="child">
+              <input ng-model="productsFilterService.activeFilters.maincat" type="radio" name="filter" value="jewellery"/>Jewellery
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button type">
+            <div class="child">
+              <input ng-model="productsFilterService.activeFilters.maincat" type="radio" name="filter" value="apparel"/>Apparel
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button type">
+            <div class="child">
+              <input ng-model="productsFilterService.activeFilters.maincat" type="radio" name="filter" value="misc"/>lifestyle
+            </div>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-12">
+      <form filter-criteria="filter-criteria">
+        <div class="col-xs-3">
+          <label style="background: #000" class="colour">
+            <input ng-click="includeColour(black)" type="checkbox" name="filter" value="black"/>#000
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #fff" class="colour">
+            <input ng-click="includeColour(white)" type="checkbox" name="filter" value="white"/>#fff
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #B6B7B8" class="colour">
+            <input ng-click="includeColour(grey)" type="checkbox" name="filter" value="grey"/>#B6B7B8
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #F77071" class="colour">
+            <input ng-click="includeColour(red)" type="checkbox" name="filter" value="red"/>#F77071
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #87A8FA" class="colour">
+            <input ng-click="includeColour(blue)" type="checkbox" name="filter" value="blue"/>#87A8FA
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #FBFA76" class="colour">
+            <input ng-click="includeColour(yellow)" type="checkbox" name="filter" value="yellow"/>#FBFA76
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #76D08C" class="colour">
+            <input ng-click="includeColour(green)" type="checkbox" name="filter" value="green"/>#76D08C
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #A28D76" class="colour">
+            <input ng-click="includeColour(brown)" type="checkbox" name="filter" value="brown"/>#A28D76
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #F8B573" class="colour">
+            <input ng-click="includeColour(orange)" type="checkbox" name="filter" value="orange"/>#F8B573
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #A575B7" class="colour">
+            <input ng-click="includeColour(purple)" type="checkbox" name="filter" value="purple"/>#A575B7
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #F4B9F5" class="colour">
+            <input ng-click="includeColour(Pink)" type="checkbox" name="filter" value="Pink"/>#F4B9F5
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: #F3ECCE" class="colour">
+            <input ng-click="includeColour(neutral)" type="checkbox" name="filter" value="neutral"/>#F3ECCE
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: url('../assets/img/ui/Neon.jpg') no-repeat center center;" class="colour">
+            <input ng-click="includeColour(Neon)" type="checkbox" name="filter" value="Neon"/>url('../assets/img/ui/Neon.jpg') no-repeat center center;
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: url('../assets/img/ui/Metallic.jpg') no-repeat center center;" class="colour">
+            <input ng-click="includeColour(Metallic)" type="checkbox" name="filter" value="Metallic"/>url('../assets/img/ui/Metallic.jpg') no-repeat center center;
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: url('../assets/img/ui/print.jpg') no-repeat center center;" class="colour">
+            <input ng-click="includeColour(Print)" type="checkbox" name="filter" value="Print"/>url('../assets/img/ui/print.jpg') no-repeat center center;
+          </label>
+        </div>
+        <div class="col-xs-3">
+          <label style="background: url('../assets/img/ui/Reflective.jpg') no-repeat center center;" class="colour">
+            <input ng-click="includeColour(Reflective)" type="checkbox" name="filter" value="Reflective"/>url('../assets/img/ui/Reflective.jpg') no-repeat center center;
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-12">
+      <form>
+        <div class="col-xs-6">
+          <label class="filter-button order">
+            <div class="child">
+              <input ng-model="order" type="radio" name="order" value="-id"/>Most recent
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button order">
+            <div class="child">
+              <input ng-model="order" type="radio" name="order" value="-likeCount"/>Most liked
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button order">
+            <div class="child">
+              <input ng-model="order" type="radio" name="order" value="-price"/>Price high
+            </div>
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label class="filter-button order">
+            <div class="child">
+              <input ng-model="order" type="radio" name="order" value="price"/>Price low
+            </div>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="filterProducts">
+    <ul id="products" masonry="masonry">
+      <li list-productsng-repeat="product in products | orderBy: order | colourFilter: this | filter: {gender: gender}" class="masonry-brick col-xs-4"></li>
+    </ul>
+  </div>
+</div>
+<script>
+  $('.filter-button.gender').click(function() {
+    $('.filter-button.gender').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.filter-button.type').click(function() {
+    $('.filter-button.type').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.filter-button.type').click(function() {
+    $('#subCat').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.filter-button').click(function() {
+    var isActive = $('input', this).is(':checked');
+    console.log(isActive);
+    if(isActive) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  });
+  $('.colour').click(function() {
+    $('.colour').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.filter-button.order').click(function() {
+    $('.filter-button.order').removeClass('active');
+    $(this).addClass('active');
+  });
+</script>

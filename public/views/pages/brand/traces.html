@@ -1,0 +1,23 @@
+
+<div id="brandTraces" ng-controller="brandCtrl">
+  <div class="col-xs-3">
+    <div id="brandSidebar" ng-controller="brandCtrl">
+      <h1 class="brand-title">{{brand}}</h1>
+      <div id="brandFollow">
+        <button ng-click="followBrand(brand)" ng-hide="ifFollowed(brand)" class="follow btn">Follow</button>
+        <button ng-click="unfollowBrand(brand)" ng-show="ifFollowed(brand)" class="unfollow btn">Unfollow</button>
+      </div>
+      <div id="intro">{{brandIntro}}</div>
+      <div id="chapters">
+        <ul class="text-right">
+          <li ng-repeat="chapter in brandChapters"><a href="/brand/{{brand}}/{{chapter}}" style="text-transform: capitalize" ng-class="{active: chapterActive(chapter)}">{{chapter}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-9">
+    <ul id="traces" masonry="masonry" ng-controller="productsCtrl">
+      <li list-traces="list-traces" ng-repeat="trace in brandTraces" class="masonry-brick col-xs-4 inspiration"></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+#vipRecentNewsContent {
+  padding: 20px;
+  padding-top: 20px;
+  max-width: 100%;
+  min-width: 800px;
+}
+#vipRecentNewsContent .top-bar {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d3d3d3;
+  height: 50px;
+  font-family: 'Source Sans Pro';
+}
+#vipRecentNewsContent .top-bar select {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-weight: 600;
+  margin-top: 12px;
+  width: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  font-size: 13px;
+  background: transparent url("/assets/images/shape-2.png") 88% 5px no-repeat;
+  border-right: 1px solid #808080;
+  border-radius: 0;
+}
+#vipRecentNewsContent .top-bar select:nth-child(2) {
+  border: none;
+  margin-left: 20px;
+}
+#vipRecentNewsContent .top-bar h5.other-profile {
+  margin-top: 14px;
+  color: #888;
+  display: none;
+}
+#vipRecentNewsContent .top-bar form input.search {
+  height: 33px;
+  border: 1px solid #d3d3d3;
+  border-right: 0;
+  outline: none;
+  color: #646464;
+  padding-left: 10px;
+}
+#vipRecentNewsContent .top-bar form input.search:focus {
+  border: 1px solid #d3d3d3;
+  border-right: 0;
+}
+#vipRecentNewsContent .top-bar form .addon {
+  height: 33px;
+}
+#vipRecentNewsContent .top-bar form button {
+  background-color: transparent;
+  border: 1px solid #d3d3d3;
+  border-left: 0;
+  height: 33px;
+  outline: none;
+}
+#vipRecentNewsContent .top-bar form button:focus {
+  outline: none;
+  border: 1px solid #d3d3d3;
+  border-left: 0;
+}
+#vipRecentNewsContent .top-bar form button .glyphicon {
+  color: #d1d1d1;
+}
+#vipRecentNewsContent .updates .lists .media-info {
+  min-height: 129px;
+  display: table-cell;
+}
+#vipRecentNewsContent .updates .lists .media-info a {
+  color: #000;
+}
+#vipRecentNewsContent .updates .lists .media-info a:hover {
+  text-decoration: none;
+}
+#vipRecentNewsContent .updates .lists .media-info .thumbnail {
+  padding-top: 20px;
+  margin-right: 6px;
+  border: 0;
+  background-color: #e2e2e2;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+#vipRecentNewsContent .updates .lists .media-info .thumbnail img {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #d3d3d3;
+}
+#vipRecentNewsContent .updates .lists .media-info .caption {
+  text-align: center;
+}
+#vipRecentNewsContent .updates .lists .media-info .caption .name {
+  font-weight: 700;
+  font-family: 'PT Sans';
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+#vipRecentNewsContent .updates .lists .media-info .caption .role {
+  font-weight: 100;
+  font-family: 'PT Sans';
+  font-size: 12px;
+}
+#vipRecentNewsContent .updates .lists .media-info .duration {
+  text-align: right;
+  color: #d3d3d3;
+  margin-right: 10px;
+  font-family: 'Source Sans Pro';
+}
+#vipRecentNewsContent .updates .lists .media-info .connection {
+  background-image: url("/assets/images/pro/icon-connections.png");
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 23%;
+  left: -35px;
+  z-index: 1;
+}
+#vipRecentNewsContent .updates .lists .media-info .likes {
+  background-image: url("/assets/images/pro/icon-love.png");
+  height: 58px;
+  width: 59px;
+  position: absolute;
+  top: 23%;
+  left: -32px;
+  z-index: 1;
+}
+#vipRecentNewsContent .updates .lists .media-info:nth-child(odd) .thumbnail {
+  margin-left: 10px;
+}
+#vipRecentNewsContent .updates .lists .media-info:nth-child(even) .thumbnail {
+  margin-right: 10px;
+}
+#vipRecentNewsContent .not-connected {
+  display: none;
+}
+#vipRecentNewsContent .not-connected h5 {
+  color: #888;
+}
+#vipRecentNewsContent .not-connected .btn-group button {
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #646464;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+  width: 130px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #d1d1d1;
+  font-weight: 800;
+  border: 0;
+}
+#vipRecentNewsContent .not-connected .btn-group button.connect {
+  background-color: #646464;
+  color: #fff;
+}

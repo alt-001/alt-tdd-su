@@ -1,0 +1,5 @@
+#home(ng-controller='productsCtrl')
+  include user/login
+  #products
+    ul(masonry)
+      li.masonry-brick.col-xs-3.product(list-products ng-repeat='product in featuredProducts')

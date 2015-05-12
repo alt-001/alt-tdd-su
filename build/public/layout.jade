@@ -1,0 +1,13 @@
+html(ng-app='alt')
+  head
+    meta(name='viewport' content='width=device-width user-scalable=no')
+    link(rel='stylesheet' type='text/css' href='/assets/css/styles.css')
+    base(href='/')
+  body(ng-cloak)
+    header
+      include views/navs/nav-top
+    section#main
+      div(ng-view)
+    footer
+      include views/navs/nav-bottom
+    include scripts

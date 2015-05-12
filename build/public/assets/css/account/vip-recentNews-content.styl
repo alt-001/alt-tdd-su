@@ -1,0 +1,143 @@
+#vipRecentNewsContent
+  padding 20px
+  padding-top 20px
+  max-width 100%
+  min-width 800px
+  .top-bar
+    margin-bottom 20px
+    padding-bottom 20px
+    border-bottom 1px solid #d3d3d3
+    height 50px
+    font-family 'Source Sans Pro'
+    select
+      outline none
+      border 0
+      background-color transparent
+      font-weight 600
+      margin-top 12px
+      width 100px
+      -webkit-appearance  none
+      -moz-appearance  none
+      text-indent  1px
+      text-overflow  ''
+      font-size 13px
+      background  transparent url("/assets/images/shape-2.png") 88% 5px no-repeat
+      border-right 1px solid grey
+      border-radius 0
+      &:nth-child(2)
+        border none
+        margin-left 20px
+    h5.other-profile
+      margin-top 14px
+      color #888
+      display none
+    form
+      input
+        &.search
+          height 33px
+          border 1px solid #d3d3d3
+          border-right 0
+          outline none
+          color #646464
+          padding-left 10px
+          &:focus
+            border 1px solid #d3d3d3
+            border-right 0
+      .addon
+        height 33px
+      button
+        background-color transparent
+        border 1px solid #d3d3d3
+        border-left 0
+        height 33px
+        outline none
+        &:focus
+          outline none
+          border 1px solid #d3d3d3
+          border-left 0
+        .glyphicon
+          color #d1d1d1
+  .updates
+    .lists
+      .media-info
+        min-height 129px
+        display table-cell
+        a
+          color black
+          &:hover
+            text-decoration none
+        .thumbnail
+          padding-top 20px
+          margin-right 6px
+          border 0
+          background-color #e2e2e2
+          position relative
+          z-index 1
+          margin-bottom   10px
+          -webkit-border-radius  2px
+          -moz-border-radius  2px
+          border-radius  2px
+          img
+            width 55px
+            height 55px
+            border 1px solid #d3d3d3
+        .caption
+          text-align center
+          .name
+            font-weight 700
+            font-family 'PT Sans'
+            font-size 14px
+            margin-bottom 0
+            padding-top 0
+          .role
+            font-weight 100
+            font-family 'PT Sans'
+            font-size 12px  
+        .duration
+          text-align right
+          color #d3d3d3
+          margin-right 10px
+          font-family 'Source Sans Pro'
+        .connection
+          background-image url("/assets/images/pro/icon-connections.png") 
+          height 60px
+          width 60px
+          position absolute
+          top 23%
+          left -35px
+          z-index 1
+        .likes
+          background-image url("/assets/images/pro/icon-love.png") 
+          height 58px
+          width 59px
+          position absolute
+          top 23%
+          left -32px
+          z-index 1 
+        &:nth-child(odd)  
+          .thumbnail
+            margin-left 10px
+        &:nth-child(even) 
+          .thumbnail
+            margin-right 10px
+  .not-connected
+    display none
+    h5
+      color #888
+    .btn-group
+      button
+        margin-top 10px
+        margin-right 10px
+        color #646464
+        font-size  12px
+        padding  2px
+        text-align center
+        width  130px
+        height  20px
+        border-radius  2px
+        background-color #d1d1d1 
+        font-weight  800
+        border 0
+        &.connect
+          background-color #646464
+          color #fff 
