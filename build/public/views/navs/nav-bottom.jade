@@ -10,7 +10,7 @@
     .menu-block.col-xs-4.text-center(ng-controller='authCtrl')
       span.login(ng-hide='currentUser')
         a(ng-href="/signup") Log in
-      span.user(ng-show='currentUser') 
+      span.user(ng-show='currentUser')
         a(href='/user/{{currentUser.$id}}/love/loves') {{currentUser.firstname}} {{currentUser.lastname}}
       span.logout(ng-show='currentUser')
         a(ng-href="/logout" ng-click="logout()") Log out
@@ -18,7 +18,7 @@
       span.follow(follow)
         a(ng-href='#' target="_self" follow) Follow
       span.info
-        a(ng-href='/info') Info
+        a(ng-href='/info/info') Info
       span.language
         a.chinese(ng-href='#') 中文
 #follow

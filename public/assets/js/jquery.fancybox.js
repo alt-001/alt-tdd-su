@@ -64,11 +64,11 @@
 			maxHeight : 9999,
 			pixelRatio: 1, // Set to 2 for retina display support
 
-			autoSize   : true,
+			autoSize   : false,
 			autoHeight : false,
 			autoWidth  : false,
 
-			autoResize  : true,
+			autoResize  : false,
 			autoCenter  : !isTouch,
 			fitToView   : true,
 			aspectRatio : false,

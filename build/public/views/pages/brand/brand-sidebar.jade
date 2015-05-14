@@ -1,9 +1,10 @@
 #brandSidebar(ng-controller="brandCtrl")
-  h1.brand-title {{brand}}
-  #brandFollow
+  h1.brand-title.col-xs-12 {{brand}}
+  #brandFollow.col-xs-12
     button.follow.btn(ng-click='followBrand(brand)' ng-hide='ifFollowed(brand)') Follow
     button.unfollow.btn(ng-click='unfollowBrand(brand)' ng-show='ifFollowed(brand)') Unfollow
-  #intro {{brandIntro}}
+  #intro.col-xs-12 {{brandIntro}}
+  br.clearfix
   #chapters
     ul.text-right
       li(ng-repeat="chapter in brandChapters" )

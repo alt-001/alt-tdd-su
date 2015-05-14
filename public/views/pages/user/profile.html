@@ -1,0 +1,45 @@
+
+<div id="profile" ng-controller="userCtrl">
+  <div id="userTopbar">
+    <ul class="col-xs-8">
+      <li>my.</li>
+      <li><a href="/user/{{currentUser.$id}}/love/loves" ng-class="{active: sectionActive(&quot;love&quot;)}">love</a></li>
+      <li><a href="/user/{{currentUser.$id}}/profile" ng-class="{active: sectionActive(&quot;profile&quot;)}">profile</a></li>
+    </ul><span class="col-xs-4 pull-right text-right">lovely to meet, <b>{{currentUser.firstname}} {{currentUser.lastname}}</b></span>
+  </div>
+  <div id="subNavi">
+    <ul>
+      <li><a href="/user/{{currentUser.$id}}/love/loves" ng-class="{active: subSectionActive(&quot;loves&quot;)}">LOVELY PRODUCTS</a></li>
+      <li><a href="/user/{{currentUser.$id}}/love/reserves" ng-class="{active: subSectionActive(&quot;reserves&quot;)}">RESERVED PRODUCTS</a></li>
+      <li><a href="/user/{{currentUser.$id}}/love/follows" ng-class="{active: subSectionActive(&quot;follows&quot;)}">FOLLOWED BRANDS</a></li>
+    </ul>
+  </div><br class="clearfix"/>
+  <div id="accountProfile">
+    <div class="user-info profile-cell col-xs-6">
+      <div class="profile-header col-xs-11">
+        <h4>User info</h4>
+        <button>edit</button>
+      </div>
+      <div class="profile-item">
+        <div class="name"><strong>Name:</strong>{{name}}</div>
+        <div class="username"><strong>User name</strong>{{username}}</div>
+        <div class="email"><strong>Email:</strong>{{email}}</div>
+        <div class="address"><strong>Address:</strong>{{address}}</div>
+      </div>
+    </div>
+    <div class="user-preference profile-cell col-xs-6">
+      <div class="profile-header col-xs-11">
+        <h4>User preferences</h4>
+        <button>edit</button>
+      </div>
+      <div class="profile-item">
+        <div class="fashion"><strong>Fashion:</strong>{{fashion}}</div>
+        <div class="category"><strong>Category:</strong>{{category}}</div>
+        <div class="colour"><strong>Colour:</strong>{{colour}}</div>
+        <div class="brand"><strong>Brands:</strong>{{brand}}</div>
+        <div class="subscription"><strong>Subscription:</strong>{{subscription}}</div>
+      </div>
+    </div>
+  </div>
+  <div id="edit"></div>
+</div>

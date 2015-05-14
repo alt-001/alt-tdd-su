@@ -1,0 +1,41 @@
+#profile(ng-controller='userCtrl')
+  include user-topbar
+  #accountProfile
+    .user-info.profile-cell.col-xs-6
+      .profile-header.col-xs-11
+        h4 User info
+        button edit
+      .profile-item
+        .name
+          strong Name:
+          | {{name}}
+        .username
+          strong User name
+          | {{username}}
+        .email
+          strong Email:
+          | {{email}}
+        .address
+          strong Address:
+          | {{address}}
+    .user-preference.profile-cell.col-xs-6
+      .profile-header.col-xs-11
+        h4 User preferences
+        button edit
+      .profile-item
+        .fashion
+          strong Fashion:
+          | {{fashion}}
+        .category
+          strong Category:
+          | {{category}}
+        .colour
+          strong Colour:
+          | {{colour}}
+        .brand 
+          strong Brands:
+          | {{brand}}
+        .subscription
+          strong Subscription:
+          {{subscription}}
+  #edit

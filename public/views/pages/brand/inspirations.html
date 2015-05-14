@@ -2,12 +2,12 @@
 <div id="brandInspirations" ng-controller="brandCtrl">
   <div class="col-xs-3">
     <div id="brandSidebar" ng-controller="brandCtrl">
-      <h1 class="brand-title">{{brand}}</h1>
-      <div id="brandFollow">
+      <h1 class="brand-title col-xs-12">{{brand}}</h1>
+      <div id="brandFollow" class="col-xs-12">
         <button ng-click="followBrand(brand)" ng-hide="ifFollowed(brand)" class="follow btn">Follow</button>
         <button ng-click="unfollowBrand(brand)" ng-show="ifFollowed(brand)" class="unfollow btn">Unfollow</button>
       </div>
-      <div id="intro">{{brandIntro}}</div>
+      <div id="intro" class="col-xs-12">{{brandIntro}}</div><br class="clearfix"/>
       <div id="chapters">
         <ul class="text-right">
           <li ng-repeat="chapter in brandChapters"><a href="/brand/{{brand}}/{{chapter}}" style="text-transform: capitalize" ng-class="{active: chapterActive(chapter)}">{{chapter}}</a></li>

@@ -6,6 +6,7 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 *,:after,:before,input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
 .popover>.arrow,.popover>.arrow:after,.tooltip-arrow{width:0;height:0;border-color:transparent;border-style:solid}
+.fancybox-nav,html{-webkit-tap-highlight-color:transparent}
 .breadcrumb,.dropdown-menu,.list-inline,.list-unstyled,.media-list,.nav,.pager,li{list-style:none}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 a{background-color:transparent}
@@ -294,8 +295,8 @@ select{background:#fff!important}
 .glyphicon-menu-right:before{content:"\e258"}
 .glyphicon-menu-down:before{content:"\e259"}
 .glyphicon-menu-up:before{content:"\e260"}
-#filters,#filters .filter-button,#filters>div,#subCat,#subCat .filter-button,#subCat>div,*,:after,:before{box-sizing:border-box}
-html{font-size:10px;-webkit-tap-highlight-color:transparent}
+*,:after,:before{box-sizing:border-box}
+html{font-size:10px}
 body{font-size:14px;line-height:1.42857143;color:#333}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
 a{color:#337ab7;text-decoration:none}
@@ -1272,6 +1273,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .modal-footer .btn-group .btn+.btn{margin-left:-1px}
 .modal-footer .btn-block+.btn-block{margin-left:0}
 .modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}
+.carousel-inner,.fancybox-inner{overflow:hidden}
 @media (min-width:768px){.modal-dialog{width:600px;margin:30px auto}
 .modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,.5);box-shadow:0 5px 15px rgba(0,0,0,.5)}
 .modal-sm{width:300px}
@@ -1314,7 +1316,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .popover.bottom>.arrow:after{top:1px;margin-left:-10px;border-top-width:0;border-bottom-color:#fff}
 .popover.left>.arrow{top:50%;right:-11px;margin-top:-11px;border-right-width:0;border-left-color:#999;border-left-color:rgba(0,0,0,.25)}
 .popover.left>.arrow:after{right:1px;bottom:-10px;border-right-width:0;border-left-color:#fff}
-.carousel-inner{width:100%;overflow:hidden}
+.carousel-inner{width:100%}
 .carousel-inner>.item{position:relative;display:none;-webkit-transition:.6s ease-in-out left;-o-transition:.6s ease-in-out left;transition:.6s ease-in-out left}
 .carousel-inner>.item>a>img,.carousel-inner>.item>img{line-height:1}
 @media all and (transform-3d),(-webkit-transform-3d){.carousel-inner>.item{-webkit-transition:-webkit-transform .6s ease-in-out;-o-transition:-o-transform .6s ease-in-out;transition:transform .6s ease-in-out;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000;perspective:1000}
@@ -1344,8 +1346,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px;cursor:pointer;background-color:transparent;border:1px solid #fff;border-radius:10px}
 .carousel-indicators .active{width:12px;height:12px;margin:0;background-color:#fff}
 .carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center}
-.carousel-caption .btn,.text-hide{text-shadow:none}
-#userTopbar,.affix{position:fixed}
+.carousel-caption .btn,.fancybox-skin,.fancybox-title,.text-hide{text-shadow:none}
 @media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-15px;font-size:30px}
 .carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{margin-left:-15px}
 .carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{margin-right:-15px}
@@ -1362,7 +1363,7 @@ button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;bor
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
-#account-love-brand #brand-info,#subNavi,#userTopbar{font-family:'PT Sans'}
+.affix{position:fixed}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
 table.visible-xs{display:table}
@@ -1421,7 +1422,52 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .hidden-print{display:none!important}
 }
 .video button{border:none!important;background-color:transparent!important}
-#userTopbar{width:100%;height:100px;padding:70px 40px 0 4%;top:0;left:0;z-index:2;background-color:#f3f3f3;box-shadow:1px 2px 2px 0 rgba(39,34,26,.2)}
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-image,.fancybox-inner,.fancybox-nav,.fancybox-nav span,.fancybox-outer,.fancybox-skin,.fancybox-tmp,.fancybox-wrap,.fancybox-wrap iframe,.fancybox-wrap object{padding:0;margin:0;border:0;outline:0;vertical-align:top}
+.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}
+.fancybox-inner,.fancybox-outer,.fancybox-skin{position:relative}
+.fancybox-wrap .description-wrapper{margin:15px 0 0;padding:10px;font-family:"source sans pro","PT Sans";background:#e9e9e9;width:100%}
+.fancybox-wrap .description-wrapper p:first-child{margin-bottom:0}
+.fancybox-skin{background:#f9f9f9;color:#444;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+.fancybox-opened{z-index:8030}
+.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 0 30px rgba(0,0,0,.1);-moz-box-shadow:0 0 30px rgba(0,0,0,.1);box-shadow:0 0 30px rgba(0,0,0,.1)}
+#infoTopBar,#userTopbar{box-shadow:1px 2px 2px 0 rgba(39,34,26,.2)}
+.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}
+.fancybox-error{color:#444;font:14px/20px "Pt Sans",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}
+.fancybox-iframe,.fancybox-image{display:block;width:100%;height:100%}
+.fancybox-image{max-width:100%;max-height:100%}
+#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:.8;cursor:pointer;z-index:8060}
+#fancybox-loading div{width:44px;height:44px;background:url(fancybox_loading.gif)center center no-repeat}
+.fancybox-close{position:absolute;top:-15px;right:-15px;width:30px;height:30px;cursor:pointer;z-index:8040;border-radius:50%;background:#000}
+.fancybox-close:before{content:"";position:absolute;width:3px;height:18px;left:13px;top:6px;background:#919191;z-index:8042;-ms-transform:rotate(45deg)-webkit-transform: rotate(45deg);transform:rotate(45deg)}
+.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:url(blank.gif);z-index:8040}
+.fancybox-prev{left:0}
+.fancybox-next{right:0}
+.fancybox-nav span{position:absolute;top:50%;width:20px;height:20px;margin-top:-18px;cursor:pointer;z-index:8042;visibility:hidden;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg)}
+.fancybox-prev span{left:20px;border-left:3px solid #000;border-bottom:3px solid #000}
+.fancybox-next span{right:20px;border-right:3px solid #000;border-top:3px solid #000}
+.fancybox-nav:hover span{visibility:visible}
+.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible!important}
+.fancybox-lock,.fancybox-lock body{overflow:hidden!important}
+.fancybox-lock{width:auto}
+.fancybox-lock-test{overflow-y:hidden!important}
+.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:rgba(239,239,239,.7)}
+.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}
+.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll}
+.fancybox-title{visibility:hidden;font:400 13px/20px "source sans pro","PT Sans",Helvetica,Arial,sans-serif;position:relative;z-index:8050;color:#000}
+.fancybox-opened .fancybox-title{visibility:visible}
+.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}
+.fancybox-title-float-wrap .child{display:inline-block;margin-right:-100%;padding:2px 20px;background:0 0;background:rgba(0,0,0,.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:700;line-height:24px;white-space:nowrap}
+.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff;background-color:#646464;padding:10px 10px 10px 15px;border-radius:5px;font-family:'Source Sans Pro'}
+#subNavi,#userTopbar{font-family:'PT Sans'}
+.fancybox-title-inside-wrap{padding-top:10px}
+.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0,0,0,.8)}
+.fancybox-wrap,.fancybox-wrap *{-moz-box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-safari-box-sizing:content-box!important;box-sizing:content-box!important}
+#brands li,#brands li .product-details,#filters,#filters .filter-button,#filters>div,#subCat,#subCat .filter-button,#subCat>div{box-sizing:border-box}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){#fancybox-loading,.fancybox-close,.fancybox-next span,.fancybox-prev span{background-image:url(fancybox_sprite@2x.png);background-size:44px 152px}
+#fancybox-loading div{background-image:url(fancybox_loading@2x.gif);background-size:24px 24px}
+}
+#userTopbar{width:100%;height:100px;padding:70px 40px 0 4%;position:fixed;top:0;left:0;z-index:2;background-color:#f3f3f3}
 #userTopbar ul li{font-size:18px;color:#000;display:inline-block;font-weight:700;margin-right:10px;line-height:1}
 #userTopbar ul li:first-child{padding-left:0}
 #userTopbar ul li a{color:#929292;font-size:16px;font-weight:100;padding:0 15px 2px}
@@ -1437,122 +1483,29 @@ td.visible-print,th.visible-print{display:table-cell!important}
 #subNavi ul li:last-child{background:0 0}
 #subNavi ul li a{color:#929292;font-size:14px;font-weight:300}
 #subNavi ul li a:hover{color:#000;text-decoration:none}
-#account-love-brand a{color:#000}
-#account-love-brand a:hover{text-decoration:none}
-#account-love-brand #brand-info{width:100%;position:absolute;bottom:0;background:rgba(255,255,255,.5);font-size:16px;font-weight:700;padding:10px}
-#accountProfile,#order{font-family:"source sans pro" "PT Sans"}
-#account-love-brand #brand-info:hover .remove{opacity:1}
-#account-love-brand #brand-info .remove{opacity:0}
-#order a{color:#000;cursor:pointer}
-#order a,#order b,#order p{font-size:12px}
-#order .order-wrapper{position:absolute;padding-bottom:80px;margin:auto;left:0;right:0}
-#order .order-wrapper .order-header{padding:10px 0;border-bottom:1px solid #d3d3d3;margin-bottom:20px;margin-top:15px}
-#order .order-wrapper .order-info .need-margin,#order .order-wrapper .order-thumb .order-thumb-cell .order-name p{margin-bottom:10px}
-#order .order-wrapper .order-header .order-no b{float:left;margin-right:3px;font-size:16px}
-#order .order-wrapper .order-header .order-no p{font-size:16px}
-#order .order-wrapper .order-header b{float:right;font-size:16px}
-#order .order-wrapper .order-thumb{background:#f5f5f5;padding-bottom:20px}
-#order .order-wrapper .order-thumb .order-thumb-cell{margin-top:20px}
-#order .order-wrapper .order-thumb .order-thumb-cell img{margin-left:20px;width:80%}
-#order .order-wrapper .order-info{padding-left:20px}
-#order .order-wrapper .order-info .no-margin{margin-bottom:0}
-#order .order-wrapper .order-info .total-price{font-size:18px}
+#brands li{background:#000;position:relative}
+#brands li:hover .product-cover{transition:all .5s ease;opacity:.8}
+#brands li:hover .product-details #followBrand{transition:all .3s ease;opacity:1}
+#brands li .product-cover{width:100%;opacity:1}
+#brands li .product-cover img{width:100%}
+#brands li .product-details{position:absolute;top:0;left:0;height:100%;width:100%;color:#000;padding:15px;font:700 1em/1.2 'PT Sans';line-height:1.6;z-index:10}
+#brands li .product-details a{color:#000;font:700 1em/1.2 'PT Sans'}
+#brands li .product-details .brand{font-weight:100;font-size:18px;margin-bottom:10px}
+#brands li .product-details #followBrand{opacity:0;font-size:10px;position:absolute;bottom:20px;width:calc(100% - 30px)}
+#brands li .product-details #followBrand .btn{background-color:#fff;border-radius:3px;clear:both;padding:3px 10px;color:#000;display:block;font-size:14px;font-weight:100;letter-spacing:.5px;line-height:1.38;text-align:center;width:100%;border:none;text-decoration:none!important}
+#brands li .product-details #followBrand .btn:hover{transition:all .6s ease;background-color:#000}
+#accountProfile{font-family:"source sans pro" "PT Sans";padding:40px}
 #accountProfile a{color:#000;cursor:pointer}
 #accountProfile a,#accountProfile b,#accountProfile p{font-size:14px}
-#accountProfile .profile-wrapper{position:absolute;padding-bottom:80px;padding-top:60px;margin:auto;left:0;right:0}
-#accountProfile .profile-wrapper .profile-cell{margin-bottom:20px}
-#accountProfile .profile-wrapper .profile-cell .profile-header{font-family:"PT Sans";font-weight:700;font-size:18px;padding-bottom:10px;margin-right:40px;margin-bottom:20px;border-bottom:1px solid #d3d3d3}
-#accountProfile .profile-wrapper .profile-cell .profile-header button{font-size:14px;border-radius:2px;background-color:#e6e6e6;border:none}
-#accountProfile .profile-wrapper #profile img{width:20px;margin-left:15px}
-#accountProfile .profile-wrapper #giftVoucher .refresh-btn{margin-left:80px;background:url(/assets/images/refresh-btn.png)left center no-repeat;border:none;padding-left:20px}
-#accountProfile .profile-wrapper #giftVoucher input[type=input]{width:40%;height:40px;margin-right:20px;background-color:#f7f7f7;border:none}
-#accountProfile .profile-wrapper #giftVoucher input[type=submit]{font-size:18px;height:40px;width:80px;font-family:"PT Sans";color:#fff;font-weight:700;border:none;border-radius:2px;background-image:-moz-linear-gradient(90deg,#4e4e4e 0,#7c7c7c 100%);background-image:-webkit-linear-gradient(90deg,#4e4e4e 0,#7c7c7c 100%);background-image:-ms-linear-gradient(90deg,#4e4e4e 0,#7c7c7c 100%);box-shadow:.16px 3px 0 0 rgba(87,87,87,.294)}
-#vipMyConnectionsContent{padding:20px;width:100%;min-width:800px;height:700px;min-height:80%;font-family:'PT Sans'}
-#vipMyConnectionsContent .top-bar{margin-bottom:20px;padding-bottom:20px;border-bottom:2px solid #d3d3d3;height:60px;font-size:18px;font-weight:700}
-#vipMyConnectionsContent .top-bar .top-bar-header{margin-top:8px}
-#vipMyConnectionsContent .top-bar select{outline:0;border:0;font-weight:600;margin-top:12px;width:98px;-moz-appearance:none;-webkit-appearance:none;background:url(/assets/images/speechbubble.png)110% 2px no-repeat}
-#vipMyConnectionsContent .top-bar form input.search{height:40px;border:2px solid #d3d3d3;border-right:0;outline:0;color:#646464;padding-left:10px;font-weight:100}
-#vipMyConnectionsContent .top-bar form input.search:focus{border:2px solid #d3d3d3;border-right:0}
-#vipMyConnectionsContent .top-bar form .addon{height:40px}
-#vipMyConnectionsContent .top-bar form button{background-color:transparent;border:2px solid #d3d3d3;border-left:0;outline:0}
-#vipMyConnectionsContent .top-bar form button:focus{outline:0;border:2px solid #d3d3d3;border-left:0}
-#vipMyConnectionsContent .top-bar form button .glyphicon{color:#d1d1d1}
-#vipMyConnectionsContent .connections img{width:60px}
-#vipMyConnectionsContent .pager{position:absolute;bottom:20px;width:95%;border-top:1px solid #d3d3d3;padding-top:10px}
-#vipMyConnectionsContent .pager li a{border:none;font-family:'PT Sans';color:grey;background:url(/assets/images/shape-1.png)center right no-repeat}
-#vipMyConnectionsContent .pager li a:hover{color:#000}
-#vipMyConnectionsContent .pager .previous a{background:url(/assets/images/shape.png)center left no-repeat}
-#vipOtherMemberProfileContent{font-family:'PT Sans';padding:10px 20px 20px}
-#vipOtherMemberProfileContent h4{font-weight:700;margin-bottom:20px}
-#vipOtherMemberProfileContent .updates .lists .media-info{min-height:129px;display:table-cell}
-#vipOtherMemberProfileContent .updates .lists .media-info .thumbnail{padding-top:20px;margin-right:6px;border:0;background-color:#e2e2e2;position:relative;z-index:1;margin-bottom:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
-#vipOtherMemberProfileContent .updates .lists .media-info .thumbnail img{width:55px;height:55px;border:1px solid #d3d3d3}
-#vipOtherMemberProfileContent .updates .lists .media-info .caption{text-align:center}
-#vipOtherMemberProfileContent .updates .lists .media-info .caption .name{font-weight:700;font-family:'PT Sans';font-size:14px;margin-bottom:0;padding-top:0}
-#vipOtherMemberProfileContent .updates .lists .media-info .caption .role{font-weight:100;font-family:'PT Sans';font-size:12px}
-#vipOtherMemberProfileContent .updates .lists .media-info .duration{text-align:right;color:#d3d3d3;margin-right:10px;font-family:'Source Sans Pro'}
-#vipOtherMemberProfileContent .updates .lists .media-info .connection{background-image:url(/assets/images/pro/icon-connections.png);height:60px;width:60px;position:absolute;top:23%;left:-35px;z-index:1}
-#vipOtherMemberProfileContent .updates .lists .media-info .likes{background-image:url(/assets/images/pro/icon-love.png);height:58px;width:59px;position:absolute;top:23%;left:-32px;z-index:1}
-#vipOtherMemberProfileContent .updates .lists .media-info:nth-child(odd) .thumbnail{margin-left:0}
-#vipOtherMemberProfileContent .updates .lists .media-info:nth-child(even) .thumbnail{margin-right:10px}
-#vipOtherMemberProfileContent .alert-msg{margin-top:10px;padding-top:10px;border-top:1px solid #d3d3d3}
-#vipOtherMemberProfileContent .alert-msg button{margin-top:20px;margin-right:10px;border-radius:2px;background-color:#666;font-weight:700;color:#fff;letter-spacing:.5px}
-#vipOtherMemberProfileContent .alert-msg button.back-btn{background-color:#dfdfdf;color:#666}
-#vipRecentNewsContent{padding:20px;max-width:100%;min-width:800px}
-#vipRecentNewsContent .top-bar{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #d3d3d3;height:50px;font-family:'Source Sans Pro'}
-#vipRecentNewsContent .top-bar select{outline:0;border:0;font-weight:600;margin-top:12px;width:100px;-webkit-appearance:none;-moz-appearance:none;text-indent:1px;text-overflow:'';font-size:13px;background:url(/assets/images/shape-2.png)88% 5px no-repeat;border-right:1px solid grey;border-radius:0}
-#vipRecentNewsContent .top-bar select:nth-child(2){border:none;margin-left:20px}
-#vipRecentNewsContent .top-bar h5.other-profile{margin-top:14px;color:#888;display:none}
-#vipRecentNewsContent .top-bar form input.search{height:33px;border:1px solid #d3d3d3;border-right:0;outline:0;color:#646464;padding-left:10px}
-#vipRecentNewsContent .top-bar form input.search:focus{border:1px solid #d3d3d3;border-right:0}
-#vipRecentNewsContent .top-bar form .addon{height:33px}
-#vipRecentNewsContent .top-bar form button{background-color:transparent;border:1px solid #d3d3d3;border-left:0;height:33px;outline:0}
-#vipRecentNewsContent .top-bar form button:focus{outline:0;border:1px solid #d3d3d3;border-left:0}
-#vipRecentNewsContent .top-bar form button .glyphicon{color:#d1d1d1}
-#vipRecentNewsContent .updates .lists .media-info{min-height:129px;display:table-cell}
-#vipRecentNewsContent .updates .lists .media-info a{color:#000}
-#vipRecentNewsContent .updates .lists .media-info a:hover{text-decoration:none}
-#vipRecentNewsContent .updates .lists .media-info .thumbnail{padding-top:20px;margin-right:6px;border:0;background-color:#e2e2e2;position:relative;z-index:1;margin-bottom:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
-#vipRecentNewsContent .updates .lists .media-info .thumbnail img{width:55px;height:55px;border:1px solid #d3d3d3}
-#vipRecentNewsContent .updates .lists .media-info .caption{text-align:center}
-#vipRecentNewsContent .updates .lists .media-info .caption .name{font-weight:700;font-family:'PT Sans';font-size:14px;margin-bottom:0;padding-top:0}
-#vipRecentNewsContent .updates .lists .media-info .caption .role{font-weight:100;font-family:'PT Sans';font-size:12px}
-#vipRecentNewsContent .updates .lists .media-info .duration{text-align:right;color:#d3d3d3;margin-right:10px;font-family:'Source Sans Pro'}
-#vipSidebar,#vipSidebar .info .details .connections,#vipSidebar .info .details .intro,#vipSidebar .info .details .name,#vipSidebar .info .headshot button{font-family:'PT Sans'}
-#vipRecentNewsContent .updates .lists .media-info .connection{background-image:url(/assets/images/pro/icon-connections.png);height:60px;width:60px;position:absolute;top:23%;left:-35px;z-index:1}
-#vipRecentNewsContent .updates .lists .media-info .likes{background-image:url(/assets/images/pro/icon-love.png);height:58px;width:59px;position:absolute;top:23%;left:-32px;z-index:1}
-#vipRecentNewsContent .updates .lists .media-info:nth-child(odd) .thumbnail{margin-left:10px}
-#vipRecentNewsContent .updates .lists .media-info:nth-child(even) .thumbnail{margin-right:10px}
-#vipRecentNewsContent .not-connected{display:none}
-#vipRecentNewsContent .not-connected h5{color:#888}
-#vipRecentNewsContent .not-connected .btn-group button{margin-top:10px;margin-right:10px;color:#646464;font-size:12px;padding:2px;text-align:center;width:130px;height:20px;border-radius:2px;background-color:#d1d1d1;font-weight:800;border:0}
-#vipRecentNewsContent .not-connected .btn-group button.connect{background-color:#646464;color:#fff}
-#vipSidebar{background:#f4f4f4;padding:30px 20px 20px;font-weight:600;max-height:100%;height:100%;position:fixed;width:25%}
-#vipSidebar .info{min-height:100px}
-#vipSidebar .info .details{font-color:#000}
-#vipSidebar .info .details .name{margin-top:0;font-weight:700;font-size:18px;margin-bottom:5px}
-#vipSidebar .info .details .intro{font-size:15px;font-weight:400;margin-bottom:3px}
-#vipSidebar .info .details .role{color:#989898;margin-bottom:12px}
-#vipSidebar .info .details .connections{font-weight:700}
-#vipSidebar .info .details .connections a{color:#989898;text-decoration:underline;font-weight:300;margin-left:5px}
-#vipSidebar .info .headshot{width:67px;margin-right:20px;float:left}
-#vipSidebar .info .headshot img{width:67px;height:auto}
-#vipSidebar .info .headshot button{margin-top:7px;margin-right:7px;color:#666;text-align:center;font-size:10px;width:67px;border-radius:2px;border:none;background-color:#e6e6e6;font-weight:700}
-#vipSidebar .info .headshot button:hover{background-color:#4c4c4c;color:#fff;transition:all .2s ease-in-out}
-#vipSidebar .about{margin-bottom:10px;padding-top:10px;height:280px;font-size:16px;font-family:'Source Sans Pro',sans-serif;font-weight:100;color:#888;border-top:1px solid #d6d6d6;overflow-y:scroll}
-#vipSidebar .recommend{position:absolute;width:90%;bottom:150px}
-#vipSidebar .recommend h3{font-size:16px;font-family:'PT Sans';font-weight:700;border-bottom:1px solid #d6d6d6;padding-bottom:10px;margin-bottom:15px}
-#vipSidebar .recommend img{margin-bottom:10px;cursor:pointer}
-#vipSidebar .recommend #carousel{height:130px}
-#vipSidebar .recommend #carousel .infowrapper .name{display:none;font-size:14px;font-weight:700;font-family:'PT Sans';margin-bottom:0}
-#vipSidebar .recommend #carousel .infowrapper .role{display:none;font-size:10px;color:#646464}
-#vipSidebar .recommend #carousel .carousel-control{width:0;color:#000}
-#vipSidebar .recommend #carousel .carousel-control.left,#vipSidebar .recommend #carousel .carousel-control.right{background-image:none}
-#vipSidebar .recommend #carousel .carousel-control.left.left,#vipSidebar .recommend #carousel .carousel-control.right.left{left:-26px}
-#vipSidebar .recommend #carousel .carousel-control.left.right,#vipSidebar .recommend #carousel .carousel-control.right.right{right:-20px}
-#vipSidebar .recommend #carousel .carousel-control .glyphicon-chevron-left,#vipSidebar .recommend #carousel .carousel-control .glyphicon-chevron-right,#vipSidebar .recommend #carousel .carousel-control .icon-prev{font-size:12px;top:35%}
-#vipSidebar .recommend #carousel .carousel-control .glyphicon-chevron-left{margin-left:0;left:-62%}
-#vipSidebar .recommend #carousel .carousel-control .glyphicon-chevron-right{margin-right:0;right:-48%}
+#accountProfile .profile-cell{margin-bottom:20px}
+#accountProfile .profile-cell .profile-header{padding-bottom:10px;margin-bottom:20px;border-bottom:1px solid #d3d3d3;float:left}
+#accountProfile .profile-cell .profile-header h4{font-family:"PT Sans";font-weight:700;font-size:18px;width:80%;float:left}
+#accountProfile .profile-cell .profile-header button{font-size:14px;padding:5px 10px;border-radius:2px;background-color:#e6e6e6;border:none;float:right}
+#accountProfile .profile-cell .profile-item strong{margin-right:5px}
+#accountProfile #profile img{width:20px;margin-left:15px}
+#accountProfile #giftVoucher .refresh-btn{margin-left:80px;background:url(/assets/images/refresh-btn.png)left center no-repeat;border:none;padding-left:20px}
+#accountProfile #giftVoucher input[type=input]{width:40%;height:40px;margin-right:20px;background-color:#f7f7f7;border:none}
+#accountProfile #giftVoucher input[type=submit]{font-size:18px;height:40px;width:80px;font-family:"PT Sans";color:#fff;font-weight:700;border:none;border-radius:2px;background-image:-moz-linear-gradient(90deg,#4e4e4e 0,#7c7c7c 100%);background-image:-webkit-linear-gradient(90deg,#4e4e4e 0,#7c7c7c 100%);background-image:-ms-linear-gradient(90deg,#4e4e4e 0,#7c7c7c 100%);box-shadow:.16px 3px 0 0 rgba(87,87,87,.294)}
 #brandStory{font-family:"PT Sans"}
 #brandStory .videogular-container{height:67%;background:#000}
 #brandStory .videogular-container videogular vg-poster img{width:100%}
@@ -1561,19 +1514,15 @@ td.visible-print,th.visible-print{display:table-cell!important}
 #brandStory .article-container p{font-size:18px;font-weight:100;margin-top:20px;font-family:"source sans pro" "PT Sans"}
 #brandStory .article-container img{width:100%;margin:20px 0}
 #brandStory .article-container iframe{width:100%}
-#brandSidebar{height:100%;background:#f6f6f6;padding:40px 40px 40px 30px;left:0;font-family:'PT Sans';font-weight:700;color:#000;position:fixed;width:inherit;z-index:999}
-#brandSidebar .brand-title{font-size:30px;margin-top:20%;text-align:right;font-weight:700}
-#brandSidebar .misc{margin:30px 0 15px}
-#brandSidebar .misc .share{padding-right:10px;padding-top:4px;border-right:1px solid #cfcfcf}
-#brandSidebar .misc .share img{opacity:.3;width:20px}
-#brandSidebar .misc a{margin-right:10px;font-size:12px;color:#929292;text-decoration:none}
-#brandSidebar .misc a.follow{padding:5px 15px;margin-right:0;margin-left:5px;letter-spacing:.5px;margin-top:1px;color:#fff;background:#bdbdbc;float:right;transition:all .2s ease-in-out;border-radius:5px}
-#brandSidebar .misc a.follow:hover{color:#fff;background-color:#000}
-#brandSidebar .misc a.message{padding:13px 20px 13px 17px;font-size:0;background:url(/assets/images/speechbubble-small.png)center center no-repeat #bdbdbc;border-radius:5px;transition:all .2s ease-in-out}
-#brandSidebar .misc a.message:hover{background-color:#000}
-#brandSidebar #intro{font-size:14px;padding:15px 0;font-weight:lighter;border-bottom:1px solid #ccc;border-top:1px solid #ccc;text-align:left;color:#646464}
+#brandSidebar{height:100%;background:#f6f6f6;padding:40px 40px 40px 30px;left:0;font-family:'PT Sans';font-weight:700;color:#000;position:fixed;overflow:scroll;width:inherit;z-index:999}
+#brandSidebar .brand-title{font-size:30px;margin-top:20%;margin-bottom:40px;text-align:right;font-weight:700}
+#brandSidebar #brandFollow{margin-bottom:15px}
+#brandSidebar #brandFollow button{padding:5px 15px;letter-spacing:.5px;margin-top:1px;font-size:12px;color:#fff;background:#bdbdbc;float:right;transition:all .2s ease-in-out;border-radius:5px}
+#brandSidebar #brandFollow button:hover{color:#fff;background-color:#000}
+#brandSidebar #brandFollow button.follow{background:#000}
+#brandSidebar #intro{font-size:14px;padding:15px 0;font-weight:lighter;border-bottom:1px solid #ccc;border-top:1px solid #ccc;text-align:left;clear:both;color:#646464}
 #filters>div,#subCat>div{border-bottom:1px solid #ddd}
-#brandSidebar #chapters{padding-top:40px}
+#brandSidebar #chapters{margin-top:40px}
 #brandSidebar #chapters ul{list-style-type:none;text-align:right;margin-right:-40px}
 #brandSidebar #chapters ul li{margin-bottom:30px}
 #brandSidebar #chapters ul li a{background:url(/assets/img/ui/icons-100.png)150% center no-repeat #f6f6f6;transition:all .5s ease-in-out;color:#929292;font-size:22px;font-weight:400;padding:10px 50px 10px 0;text-decoration:none}
@@ -1623,7 +1572,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .instruction{width:300px;font:700 1em/1.2 'PT Sans';color:#afafaf;padding-left:50px;background:url(/assets/images/pull-right.png)left 85px no-repeat;position:absolute;margin:auto;left:0;right:0;top:100px}
 .instruction h4{font-weight:700;line-height:1.4;margin-bottom:20px}
 #filters{top:0;left:0;position:fixed;width:300px;height:100%;padding:180px 20px 25px;z-index:128;background-color:#f9f9f9;text-align:center;overflow-y:auto}
-#nav-bottom,svg:not(:root){overflow:hidden}
+#nav-bottom,#nav-top,svg:not(:root){overflow:hidden}
 #filters #handle{height:160px;background-color:#d1f1db;position:absolute;width:100%;padding:60px 30px 0;top:0;left:0;font-family:"PT Sans";text-align:left}
 #filters #handle h1,#filters #handle h4{font-weight:700;margin:0;line-height:1.4}
 #filters #handle h1{background:url(/assets/img/ui/pull-left.png)center right no-repeat;width:110px}
@@ -1641,6 +1590,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 #filters .child{display:table-cell;vertical-align:middle}
 #filters .prefer{color:#858585;font:italic 400 .75em/1.38 Helvetica;text-align:center;text-decoration:underline;margin-top:20px}
 #follow a:hover,#nav-bottom span a,.panel-title a,a:hover{text-decoration:none}
+#search .title,dfn{font-style:italic}
 #subCat{top:0;left:300px;width:200px;height:100%;padding:25px 20px;opacity:1;z-index:120;background-color:rgba(255,255,255,.9);text-align:center}
 #subCat.active{left:0;opacity:0;-webkit-transition:all 500ms cubic-bezier(.42,0,.58,1);-moz-transition:all 500ms cubic-bezier(.42,0,.58,1);-o-transition:all 500ms cubic-bezier(.42,0,.58,1);transition:all 500ms cubic-bezier(.42,0,.58,1)}
 #subCat>div{display:block;height:auto;padding-bottom:10px;margin-bottom:20px}
@@ -1716,7 +1666,6 @@ a{background:0 0}
 a:active,a:hover{outline:0}
 abbr[title]{border-bottom:1px dotted}
 b,optgroup,strong{font-weight:700}
-dfn{font-style:italic}
 h1{font-size:2em;margin:.67em 0}
 mark{background:#ff0;color:#000}
 small{font-size:80%}
@@ -1759,8 +1708,48 @@ ul{padding-left:0;margin-bottom:0}
 #products li .product-details .btn img{margin-top:8px;margin-left:10px;height:20px;opacity:.3;cursor:pointer}
 #products li .product-details .btn img:hover{transition:all .6s ease;opacity:1}
 #products li .love-count{position:absolute;z-index:11;width:30px;font-size:12px;height:25px;bottom:30px;right:30px;font-family:'PT Sans';padding:1px;color:#a3a3a3;background:url(/assets/img/ui/lovely_icon.png)center center no-repeat;background-size:cover}
+.signup-wrapper{width:100%;height:100%;background:rgba(218,218,218,.7);position:fixed;z-index:99;top:0;left:0}
+.signup-wrapper #signup .close,.signup-wrapper #signup .divider.or,.signup-wrapper #signup .divider.with{background-repeat:no-repeat;background-position:center center}
+.signup-wrapper #signup{bottom:0;height:400px;left:0;margin:auto;position:fixed;right:0;top:0;width:290px;z-index:125;background-color:#fff;border-radius:5px;opacity:.95}
+.infos input,.infos textarea{border:1px solid #d8d8d8;margin-bottom:20px}
+.signup-wrapper #signup .title{color:#000;font:700 25px/1.2 'PT Sans';position:absolute;text-align:center;top:10px;width:100%;z-index:300}
+.signup-wrapper #signup .email,.signup-wrapper #signup .password,.signup-wrapper #signup .submit{font:700 16px/1.2 'PT Sans'}
+.signup-wrapper #signup .divider{height:12px;margin-left:20px;position:absolute;top:50px;width:250px;z-index:300}
+.signup-wrapper #signup .divider.with{background-image:url(/assets/img/ui/signup_divider1.png)}
+.signup-wrapper #signup .divider.or{background-image:url(/assets/img/ui/signup_divider2.png);top:225px}
+.signup-wrapper #signup .email{color:#000;height:40px;padding-left:10px;left:20px;position:absolute;top:80px;width:250px;z-index:300}
+.signup-wrapper #signup .password{color:#000;height:40px;left:20px;padding-left:10px;position:absolute;top:130px;width:250px;z-index:300}
+.signup-wrapper #signup .submit{border:1px solid #000;color:#000;height:30px;left:20px;position:absolute;background-color:#fff;top:180px;width:250px;z-index:300}
+.signup-wrapper #signup .submit:hover{color:#fff;background-color:#000;border:1px solid #757576;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
+.signup-wrapper #signup .social{height:30px;left:50px;position:absolute;top:250px;width:230px;z-index:300}
+.signup-wrapper #signup .social img{margin-right:24px;opacity:.6;width:30px}
+.signup-wrapper #signup .social img:hover{transition:all .8s ease;opacity:1}
+.signup-wrapper #signup p{color:#878787;font:300 14px/1.2 'PT Sans';height:30px;left:20px;position:absolute;text-align:center;top:290px;width:250px;z-index:300}
+.signup-wrapper #signup p a{color:#000;cursor:point}
+.signup-wrapper #signup .close{background-image:url(/assets/img/ui/follow_cross.png);height:40px;left:125px;position:absolute;top:330px;width:40px;z-index:300;transition:all .5s ease}
+.signup-wrapper #signup .shadow{position:absolute;z-index:300;width:280px;height:40px;top:394px;left:5px;background-image:url(/assets/img/ui/shadow.png);background-position:center;background-repeat:no-repeat}
+#nav-top{display:block;height:auto;left:0;position:fixed;top:-2px;width:170px;z-index:1000}
+#infoTopBar{font-family:'PT Sans';height:100px;width:100%;position:relative;background-color:#f3f3f3;padding:65px 40px 0;box-sizing:border-box}
+#infoTopBar ul li{font-size:18px;color:#000;display:inline-block;font-weight:700;margin-right:10px;line-height:1}
+#infoTopBar ul li:first-child{padding-left:0}
+#infoTopBar ul li a{color:#929292;font-size:16px;font-weight:100;padding:0 15px 2px}
+#infoTopBar ul li a:hover{color:#000;text-decoration:none}
+#infoTopBar ul li a.active{color:#000}
+#infoTopBar .chat-text{color:#929292;margin-top:22px;font-size:16px;font-weight:100;padding-right:30px}
+#infoTopBar .chat-text b{color:#000;margin-left:10px}
+#infoTopBar .chat_btn{margin-top:20px;margin-right:30px;text-align:left;font-size:11px;padding:6px 40px 6px 10px;border-radius:2px;background:url(/assets/images/speechbubble.png)88% 6px no-repeat #e2e2e2;font-weight:600;border:0}
+.infos input,.infos textarea{padding:10px;border-radius:5px}
+#infoTopBar .chat_btn:hover{color:#fff;background:url(/assets/images/speechbubble_hover.png)88% 6px no-repeat #3c3c3c;transition:all .3s ease-in-out 0s}
+.infos{padding:30px 5% 60px;font-family:'PT Sans' 'Source Sans Pro'}
+.infos textarea{height:200px}
+.info-wrapper p{margin-bottom:30px}
+.info-wrapper a{color:#000}
+.info-wrapper #tabCareer .panel-heading a{margin:0}
+.info-wrapper #tabCareer .panel-collapse:last-child,.info-wrapper #tabCareer p:last-child{margin-bottom:0}
+.info-wrapper .btn-group button{margin-top:10px;margin-right:10px;color:#646464;font-size:12px;text-align:center;border-radius:2px;background-color:#e6e6e6;font-weight:800;border:0;padding:5px 20px}
+.info-wrapper .btn-group button.send{background-color:#646464;color:#fff}
 #search{font-family:'PT Sans' 'Source San Pro';padding:20px}
-#search .title{font-size:13px;font-style:italic;font-weight:300;margin-top:60px}
+#search .title{font-size:13px;font-weight:300;margin-top:60px}
 #search input{color:#908f8f;font:700 100px/1.2 'PT Sans';height:120px;position:absolute;text-transform:uppercase;width:100%;border:none}
 #search .results{width:100%;margin-top:150px}
 #search .results .section{border-bottom:1px solid #e4e4e4;margin-bottom:10px;padding-bottom:10px}
@@ -1779,52 +1768,7 @@ ul{padding-left:0;margin-bottom:0}
 #search .no-result{color:#908f8f}
 #search .no-result h2{font-size:24px;margin-bottom:10px;text-transform:capitalize}
 #search .no-result p{font-style:italic}
-#showroom{font-family:'PT Sans' 'Source Sans Pro'}
-#showroom h2{display:block;margin-top:20%;font-weight:700;color:#b8b8b8;text-transform:uppercase;text-align:center}
-.signup-wrapper{width:100%;height:100%;background:rgba(218,218,218,.7);position:fixed;z-index:99;top:0;left:0}
-.signup-wrapper #signup .close,.signup-wrapper #signup .divider.or,.signup-wrapper #signup .divider.with{background-repeat:no-repeat;background-position:center center}
-.signup-wrapper #signup{bottom:0;height:400px;left:0;margin:auto;position:fixed;right:0;top:0;width:290px;z-index:125;background-color:#fff;border-radius:5px;opacity:.95}
-.signup-wrapper #signup .title{color:#000;font:700 25px/1.2 'PT Sans';position:absolute;text-align:center;top:10px;width:100%;z-index:300}
-.signup-wrapper #signup .email,.signup-wrapper #signup .password,.signup-wrapper #signup .submit{font:700 16px/1.2 'PT Sans'}
-.signup-wrapper #signup .divider{height:12px;margin-left:20px;position:absolute;top:50px;width:250px;z-index:300}
-.signup-wrapper #signup .divider.with{background-image:url(/assets/img/ui/signup_divider1.png)}
-.signup-wrapper #signup .divider.or{background-image:url(/assets/img/ui/signup_divider2.png);top:225px}
-.signup-wrapper #signup .email{color:#000;height:40px;padding-left:10px;left:20px;position:absolute;top:80px;width:250px;z-index:300}
-.signup-wrapper #signup .password{color:#000;height:40px;left:20px;padding-left:10px;position:absolute;top:130px;width:250px;z-index:300}
-.signup-wrapper #signup .submit{border:1px solid #000;color:#000;height:30px;left:20px;position:absolute;background-color:#fff;top:180px;width:250px;z-index:300}
-.signup-wrapper #signup .submit:hover{color:#fff;background-color:#000;border:1px solid #757576;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
-.signup-wrapper #signup .social{height:30px;left:50px;position:absolute;top:250px;width:230px;z-index:300}
-.signup-wrapper #signup .social img{margin-right:24px;opacity:.6;width:30px}
-.signup-wrapper #signup .social img:hover{transition:all .8s ease;opacity:1}
-.signup-wrapper #signup p{color:#878787;font:300 14px/1.2 'PT Sans';height:30px;left:20px;position:absolute;text-align:center;top:290px;width:250px;z-index:300}
-.signup-wrapper #signup p a{color:#000;cursor:point}
-.signup-wrapper #signup .close{background-image:url(/assets/img/ui/follow_cross.png);height:40px;left:125px;position:absolute;top:330px;width:40px;z-index:300;transition:all .5s ease}
-.signup-wrapper #signup .shadow{position:absolute;z-index:300;width:280px;height:40px;top:394px;left:5px;background-image:url(/assets/img/ui/shadow.png);background-position:center;background-repeat:no-repeat}
-#nav-top{display:block;height:auto;left:0;overflow:hidden;position:fixed;top:-2px;width:170px;z-index:1000}
-#info-top{font-family:'PT Sans'}
-#signin-sidebar,.info-wrapper{font-family:'PT Sans' 'Source Sans Pro'}
-#info-top .navs{height:100px;background-color:#f3f3f3;box-shadow:1px 2px 2px 0 rgba(39,34,26,.2)}
-#info-top .navs ul{margin-top:50px;margin-left:8%}
-#info-top .navs ul li{font-size:18px;color:#000;display:inline-block;font-weight:700;margin-right:10px;line-height:1}
-#info-top .navs ul li:first-child{padding-left:0}
-#info-top .navs ul li a{color:#929292;font-size:16px;font-weight:100;padding:0 15px 2px}
-#info-top .navs ul li a:hover{color:#000;text-decoration:none}
-#info-top .navs ul li a.active{color:#000}
-#info-top .navs .chat-text{color:#929292;margin-top:22px;font-size:16px;font-weight:100;padding-right:30px}
-#info-top .navs .chat-text b{color:#000;margin-left:10px}
-#info-top .navs .chat_btn{margin-top:20px;margin-right:30px;text-align:left;font-size:11px;padding:6px 40px 6px 10px;border-radius:2px;background:url(/assets/images/speechbubble.png)88% 6px no-repeat #e2e2e2;font-weight:600;border:0}
-.info-wrapper input,.info-wrapper textarea{padding:10px;border-radius:5px;border:1px solid #d8d8d8}
-#info-top .navs .chat_btn:hover{color:#fff;background:url(/assets/images/speechbubble_hover.png)88% 6px no-repeat #3c3c3c;transition:all .3s ease-in-out 0s}
-.info-wrapper{padding:30px 5% 60px}
-.info-wrapper input{margin-bottom:20px}
-.info-wrapper textarea{height:200px;margin-bottom:20px}
-.info-wrapper p{margin-bottom:30px}
-.info-wrapper a{color:#000}
-.info-wrapper #tabCareer .panel-heading a{margin:0}
-.info-wrapper #tabCareer .panel-collapse:last-child,.info-wrapper #tabCareer p:last-child{margin-bottom:0}
-.info-wrapper .btn-group button{margin-top:10px;margin-right:10px;color:#646464;font-size:12px;text-align:center;border-radius:2px;background-color:#e6e6e6;font-weight:800;border:0;padding:5px 20px}
-.info-wrapper .btn-group button.send{background-color:#646464;color:#fff}
-#signin-sidebar{position:fixed;background-color:#3e3e3e;height:100%;overflow:scroll;padding-bottom:60px}
+#signin-sidebar{position:fixed;font-family:'PT Sans' 'Source Sans Pro';background-color:#3e3e3e;height:100%;overflow:scroll;padding-bottom:60px}
 #signin-sidebar input{border:1px solid #dadada;font-size:16px;background-color:transparency;margin:10px 6px 10px 0;padding:6px 10px}
 #signin-sidebar input.active,#signin-sidebar input:focus,#signin-sidebar input:hover{outline:0}
 #signin-sidebar #login{background-color:#fdfdfd;padding:55px 50px 20px;color:#000;font-size:20px;font-weight:800}

@@ -216,12 +216,22 @@ alt.controller('userCtrl', function($scope, $location, $routeParams, auth, produ
       'active': ''
     };
   };
-  return $scope.subSectionActive = function(subSection) {
+  $scope.subSectionActive = function(subSection) {
     var ref;
     return (ref = subSection === currentRoute[4]) != null ? ref : {
       'active': ''
     };
   };
+  $scope.name = 'X Tao';
+  $scope.username = 'tao';
+  $scope.email = 'taoxh@hotmail.com';
+  $scope.gender = 'male';
+  $scope.address = '47 Neeld Cresent';
+  $scope.fashion = "Men's fashion";
+  $scope.category = 'Shoes, T-shirt';
+  $scope.colour = 'Red, Blue';
+  $scope.brand = 'A, B, C';
+  return $scope.subscription = 'You have subscribbed to our newsletter and recommendation';
 });
 
 alt.directive('adminProducts', function() {
@@ -266,6 +276,18 @@ alt.directive('listInspirations', function() {
   return {
     restrict: 'AE',
     templateUrl: '/views/directives/list-inspirations.html'
+  };
+});
+
+alt.directive('fancybox', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      $(element).fancybox();
+      if (scope.$last) {
+        $('.fancybox').fancybox;
+      }
+    }
   };
 });
 
