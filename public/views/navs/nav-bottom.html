@@ -1,7 +1,7 @@
 
 <div id="nav-bottom">
   <div class="menu">
-    <div class="menu-block col-xs-4"><span class="explore"><a ng-href="/explore">Explore</a></span><span class="search"><a ng-href="/search">Search</a></span><span class="showroom"><a ng-href="/showroom">Showroom</a></span></div>
+    <div class="menu-block col-xs-4"><span class="explore"><a ng-href="/explore">Explore</a></span><span class="search"><a ng-href="/search">Search</a></span></div>
     <div ng-controller="authCtrl" class="menu-block col-xs-4 text-center"><span ng-hide="currentUser" class="login"><a ng-href="/signup">Log in</a></span><span ng-show="currentUser" class="user"><a href="/user/{{currentUser.$id}}/love/loves">{{currentUser.firstname}} {{currentUser.lastname}}</a></span><span ng-show="currentUser" class="logout"><a ng-href="/logout" ng-click="logout()">Log out</a></span></div>
     <div class="menu-block col-xs-4 text-right"><span follow="follow" class="follow"><a ng-href="#" target="_self" follow="follow">Follow</a></span><span class="info"><a ng-href="/info/info">Info</a></span><span class="language"><a ng-href="#" class="chinese">中文</a></span></div>
   </div>
